@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315202051) do
+ActiveRecord::Schema.define(version: 20140315235007) do
 
   create_table "collisions", force: true do |t|
     t.string   "date_of_collision"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20140315202051) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "distance"
+    t.string   "weather_condition"
   end
 
 end
