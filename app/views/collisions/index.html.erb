@@ -1,0 +1,49 @@
+<h1>Listing collisions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date of collision</th>
+      <th>Time of collision</th>
+      <th>Location</th>
+      <th>Collision type</th>
+      <th>Involved with</th>
+      <th>Vehicle one direction</th>
+      <th>Vechicle one motion</th>
+      <th>Vehicle two direction</th>
+      <th>Vehicle two motion</th>
+      <th>Primary cause</th>
+      <th>Injuries</th>
+      <th>Fatalities</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @collisions.each do |collision| %>
+      <tr>
+        <td><%= collision.date_of_collision %></td>
+        <td><%= collision.time_of_collision %></td>
+        <td><%= collision.location %></td>
+        <td><%= collision.collision_type %></td>
+        <td><%= collision.involved_with %></td>
+        <td><%= collision.vehicle_one_direction %></td>
+        <td><%= collision.vechicle_one_motion %></td>
+        <td><%= collision.vehicle_two_direction %></td>
+        <td><%= collision.vehicle_two_motion %></td>
+        <td><%= collision.primary_cause %></td>
+        <td><%= collision.injuries %></td>
+        <td><%= collision.fatalities %></td>
+        <td><%= link_to 'Show', collision %></td>
+        <td><%= link_to 'Edit', edit_collision_path(collision) %></td>
+        <td><%= link_to 'Destroy', collision, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Collision', new_collision_path %>

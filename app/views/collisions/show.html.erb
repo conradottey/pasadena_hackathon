@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date of collision:</strong>
+  <%= @collision.date_of_collision %>
+</p>
+
+<p>
+  <strong>Time of collision:</strong>
+  <%= @collision.time_of_collision %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @collision.location %>
+</p>
+
+<p>
+  <strong>Collision type:</strong>
+  <%= @collision.collision_type %>
+</p>
+
+<p>
+  <strong>Involved with:</strong>
+  <%= @collision.involved_with %>
+</p>
+
+<p>
+  <strong>Vehicle one direction:</strong>
+  <%= @collision.vehicle_one_direction %>
+</p>
+
+<p>
+  <strong>Vechicle one motion:</strong>
+  <%= @collision.vechicle_one_motion %>
+</p>
+
+<p>
+  <strong>Vehicle two direction:</strong>
+  <%= @collision.vehicle_two_direction %>
+</p>
+
+<p>
+  <strong>Vehicle two motion:</strong>
+  <%= @collision.vehicle_two_motion %>
+</p>
+
+<p>
+  <strong>Primary cause:</strong>
+  <%= @collision.primary_cause %>
+</p>
+
+<p>
+  <strong>Injuries:</strong>
+  <%= @collision.injuries %>
+</p>
+
+<p>
+  <strong>Fatalities:</strong>
+  <%= @collision.fatalities %>
+</p>
+
+<%= link_to 'Edit', edit_collision_path(@collision) %> |
+<%= link_to 'Back', collisions_path %>

@@ -1,0 +1,65 @@
+<%= form_for(@collision) do |f| %>
+  <% if @collision.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@collision.errors.count, "error") %> prohibited this collision from being saved:</h2>
+
+      <ul>
+      <% @collision.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_of_collision %><br>
+    <%= f.text_field :date_of_collision %>
+  </div>
+  <div class="field">
+    <%= f.label :time_of_collision %><br>
+    <%= f.text_field :time_of_collision %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
+  <div class="field">
+    <%= f.label :collision_type %><br>
+    <%= f.text_field :collision_type %>
+  </div>
+  <div class="field">
+    <%= f.label :involved_with %><br>
+    <%= f.text_field :involved_with %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_one_direction %><br>
+    <%= f.text_field :vehicle_one_direction %>
+  </div>
+  <div class="field">
+    <%= f.label :vechicle_one_motion %><br>
+    <%= f.text_field :vechicle_one_motion %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_two_direction %><br>
+    <%= f.text_field :vehicle_two_direction %>
+  </div>
+  <div class="field">
+    <%= f.label :vehicle_two_motion %><br>
+    <%= f.text_field :vehicle_two_motion %>
+  </div>
+  <div class="field">
+    <%= f.label :primary_cause %><br>
+    <%= f.text_field :primary_cause %>
+  </div>
+  <div class="field">
+    <%= f.label :injuries %><br>
+    <%= f.number_field :injuries %>
+  </div>
+  <div class="field">
+    <%= f.label :fatalities %><br>
+    <%= f.number_field :fatalities %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
