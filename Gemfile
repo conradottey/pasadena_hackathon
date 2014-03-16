@@ -35,3 +35,4 @@ gem 'rails_admin'
 gem "devise"
 gem 'faker'
 gem 'openstreetmap'
+# gem 'geocoder'
