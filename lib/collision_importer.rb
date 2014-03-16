@@ -7,8 +7,9 @@ class CollisionImporter
     # Find or create the screencast data into our database
 
   	CSV.foreach(file, :headers => true, :encoding => 'windows-1251:utf-8') do |row|
+      time = Time.parse(row[0]).strftime("%m/%d/%y")
       Collision.create(
-        date_of_collision:     row[0],
+        date_of_collision:     time,
         time_of_collision:     row[1],
         location:              row[2],
         distance:              row[3],
