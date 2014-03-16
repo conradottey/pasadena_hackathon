@@ -25,10 +25,3 @@ class CollisionImporter
     end
   end
 end
-
-#     Team.create {
-#       :name => row[1],
-#       :league => row[2],
-#       :some_other_data => row[4]
-#     }
-

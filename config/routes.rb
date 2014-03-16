@@ -1,4 +1,6 @@
 Traffic::Application.routes.draw do
+  resources :weathers
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   resources :collisions
 
