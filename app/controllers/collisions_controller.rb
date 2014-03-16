@@ -57,6 +57,6 @@ class CollisionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def collision_params
-      params.require(:collision).permit(:date_of_collision, :time_of_collision, :location, :collision_type, :involved_with, :vehicle_one_direction, :vechicle_one_motion, :vehicle_two_direction, :vehicle_two_motion, :primary_cause, :injuries, :fatalities, :distance)
+      params.require(:collision).permit(:date_of_collision, :time_of_collision, :location, :collision_type, :involved_with, :vehicle_one_direction, :vechicle_one_motion, :vehicle_two_direction, :vehicle_two_motion, :primary_cause, :injuries, :fatalities, :distance,:weather_condition)
     end
 end
